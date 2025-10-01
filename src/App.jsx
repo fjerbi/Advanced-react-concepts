@@ -7,10 +7,14 @@ import { books } from "./data/books";
 import { SmallBookListItem } from "./components/books/SmallListItems";
 import { LargeBookListItem } from "./components/books/LargeListItems";
 import { NumberedList } from "./components/lists/Numbered";
+import { Modal } from "./components/Modal";
 
 function App() {
   return (
     <>
+      <Modal>
+        <LargeBookListItem book={books[0]} />
+      </Modal>
       <StandardList
         items={authors}
         sourceName={"author"}
