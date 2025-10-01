@@ -1,4 +1,4 @@
-export const boojs = [
+export const books = [
     {
         name:"Book One",
         pages:100,
