@@ -2,14 +2,19 @@ import React from "react";
 import { CurrentUserLoader } from "./components/current-user-loader";
 import { UserInfo } from "./components/user-info";
 import { UserLoader } from "./components/user-loader";
-
+import { ResourceLoader } from "./components/resource-loader";
+import { BookInfo } from "./components/book-info";
 
 function App() {
   return (
     <>
-     <UserLoader userId={3}>
-      <UserInfo />
-     </UserLoader >
+      <ResourceLoader resourceUrl={"/users/2"} resourceName={"user"}>
+        <UserInfo />
+      </ResourceLoader>
+
+       <ResourceLoader resourceUrl={"/books/1"} resourceName={"book"}>
+        <BookInfo />
+      </ResourceLoader>
     </>
   );
 }
